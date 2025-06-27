@@ -21,12 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+    <?php include "./menu.php"?>
     <h1 class="text-primary text-center my-5">Conjugaison des verbes réguliers du premier groupe</h1>
-    <form action="./index.php" method="post" class="container my-5">
+    <form action="./conjugaison.php" method="post" class="container my-5">
         <div class="mb-3 row">
             <label for="infinitif" class="col-sm-2 col-form-label">Verbe à l'infinitif</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="infinitif" name=infinitif value=<?= $infinitif ?>>
+                <input type="text" class="form-control "id="infinitif" placeholder="Saisissez un verbe du premier groupe à l'infinitif" name=infinitif value=<?= $infinitif ?>>
             </div>
         </div>
         <div class="mb-3 row">
@@ -47,7 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </form>
-    <div>
+    <div class= "text-primary text-center my-5 resultattext-center">
+
         <?= $resultat ?>
     </div>
 </body>
